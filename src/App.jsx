@@ -36,7 +36,7 @@ export default function App() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/chat", {
+      const response = await fetch("https://persona-based-ai-chatbot-thuu.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
