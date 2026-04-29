@@ -1,71 +1,148 @@
-# Scaler Persona Chatbot
+# Persona-Based AI Chatbot
 
-A persona-based AI chatbot that lets you talk with three Scaler personalities — Anshuman Singh, Abhimanyu Saxena, and Kshitij Mishra.
+A React + Node.js application that simulates conversations with different tech leaders using **prompt-engineered personas**.
 
-Built as Assignment 01 for the Prompt Engineering module at Scaler School of Technology.
+Each persona is designed using structured prompt engineering techniques such as:
 
-## Live Demo
+* Persona definition
+* Few-shot learning
+* Chain-of-thought reasoning
+* Output formatting
+* Constraints
 
-[🔗 Insert your deployed Vercel/Netlify URL here]
+---
 
-## Features
+##  Live Demo
 
-- 3 distinct AI personas with unique system prompts
-- Persona switcher — conversation resets on switch
-- Suggestion chips per persona
-- Typing indicator during API calls
-- Graceful error handling
-- Mobile responsive
+Frontend: https://persona-based-ai-chatbot.vercel.app  
+Backend: https://persona-based-ai-chatbot-thuu.onrender.com
 
-## Tech Stack
+---
 
-- React 18
-- Anthropic Claude API (`claude-sonnet-4-20250514`)
+##  Personas
 
-## Setup Instructions
+### 1. Anshuman Singh
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/scaler-persona-chatbot
-   cd scaler-persona-chatbot
-   ```
+* Direct, analytical, first-principles thinker
+* Challenges assumptions and focuses on fundamentals
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### 2. Abhimanyu Saxena
 
-3. **Set up your API key**
-   ```bash
-   cp .env.example .env
-   ```
-   Open `.env` and replace `your_anthropic_api_key_here` with your real Anthropic API key.
+* Reflective, calm, human-centered thinker
+* Focuses on systems, habits, and long-term growth
 
-4. **Run locally**
-   ```bash
-   npm start
-   ```
-   The app opens at `http://localhost:3000`
+### 3. Kshitij Mishra
 
-## Deployment (Vercel)
+* Execution-focused, precise instructor
+* Emphasizes clarity, correctness, and mastery
 
-1. Push the repo to GitHub
-2. Go to [vercel.com](https://vercel.com) and import the repo
-3. In the Environment Variables section, add:
-   - Key: `REACT_APP_ANTHROPIC_API_KEY`
-   - Value: your real API key
-4. Deploy
+---
 
-## Project Structure
+##  Tech Stack
 
-```
-src/
-  App.jsx      — Main component, UI logic, API calls
-  App.css      — All styles
-  personas.js  — System prompts for all 3 personas
-  index.js     — React entry point
+* **Frontend:** React (Create React App)
+* **Backend:** Node.js, Express
+* **API:** AICredits (GPT-4o-mini)
+* **Deployment:**
+
+  * Frontend → Vercel
+  * Backend → Render
+
+---
+
+##  Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/persona-based-ai-chatbot.git
+cd persona-based-ai-chatbot
 ```
 
-## Screenshots
+---
 
-[Add screenshots here]
+### 2. Setup Backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file inside `backend/`:
+
+```env
+AICREDITS_API_KEY=your_api_key_here
+```
+
+Run backend:
+
+```bash
+node server.js
+```
+
+---
+
+### 3. Setup Frontend
+
+```bash
+npm install
+npm start
+```
+
+---
+
+### 4. Update API URL
+
+In `App.jsx`, ensure:
+
+```js
+https://persona-based-ai-chatbot-thuu.onrender.com/chat
+```
+
+---
+
+##  Project Structure
+
+```text
+persona-based-ai-chatbot/
+│
+├── backend/        # Express server (API proxy)
+├── src/            # React frontend
+├── public/
+├── personas.js     # Core prompt engineering logic
+├── prompts.md      # Annotated system prompts
+├── reflection.md   # Project reflection
+└── README.md
+```
+
+---
+
+##  Features
+
+* Multiple AI personas with distinct behavior
+* Real-time chat interface
+* Secure backend API handling
+* Prompt-engineered responses
+* Deployed full-stack application
+
+---
+
+##  Key Learnings
+
+* Prompt engineering directly impacts AI behavior
+* Few-shot examples significantly improve response quality
+* Constraints prevent generic or incorrect outputs
+* Different personas can be simulated using structured prompts
+
+---
+
+##  Documentation
+
+* `prompts.md` → Annotated system prompts
+* `reflection.md` → Learnings and improvements
+
+---
+
+##  Author
+
+Aditya Vikram Singh
